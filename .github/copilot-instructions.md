@@ -5,5 +5,5 @@
 - Keep public APIs documented (`///`) and options-driven via `CryptographySettings`.
 - DI: `AddStangaNetLibCryptography` (with or without `IConfiguration`).
 - Match existing naming, file-scoped namespaces, and EditorConfig / Roslyn conventions.
-- Tests use xUnit v3 + FluentAssertions; cover both `net8.0` and `net9.0` when changing shared behavior.
+- Tests use xUnit v3 + FluentAssertions; cover `net8.0`, `net9.0`, and `net10.0` when changing shared behavior.
 - Never weaken constant-time comparisons or reduce PBKDF2 iteration floors without an explicit security review.

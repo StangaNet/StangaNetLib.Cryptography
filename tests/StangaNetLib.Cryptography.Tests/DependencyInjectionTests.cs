@@ -21,6 +21,7 @@ public sealed class DependencyInjectionTests
         sp.GetRequiredService<IKeyDerivationService>().Should().NotBeNull();
         sp.GetRequiredService<IDigitalSignatureService>().Should().NotBeNull();
         sp.GetRequiredService<IEncryptionService>().Should().NotBeNull();
+        sp.GetRequiredService<IAtRestEncryptionService>().Should().NotBeNull();
         sp.GetRequiredService<ISecureTokenService>().Should().NotBeNull();
     }
 

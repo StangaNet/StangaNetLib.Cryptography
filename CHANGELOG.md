@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 
+## [1.1.0] - 2026-10-23
+
+### Added
+- `IAtRestEncryptionService` — AES-256-GCM at-rest encryption for blobs and chunked streams with a versioned `SNEN` envelope embedding KDF id, salt, and PBKDF2 iterations.
+- PBKDF2 (passphrase) and HKDF (raw IKM) key derivation paths for at-rest envelopes.
+- `FileEnvelope.WriteAsync` / `ReadAsync` helpers for portable encrypted files.
+- DI registration of `IAtRestEncryptionService` via `AddStangaNetLibCryptography`.
+
 ## [1.0.1] - 2026-10-23
 
 ### Changed
@@ -28,6 +36,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Depends on `StangaNetLib.Core` 1.0.0; Microsoft.Extensions.* pinned to 8.x.
 - CI via shared StangaNet reusable workflow (push / PR / manual; publish outside PRs).
 
-[Unreleased]: https://github.com/StangaNet/StangaNetLib.Cryptography/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/StangaNet/StangaNetLib.Cryptography/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/StangaNet/StangaNetLib.Cryptography/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/StangaNet/StangaNetLib.Cryptography/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/StangaNet/StangaNetLib.Cryptography/releases/tag/v1.0.0

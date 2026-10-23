@@ -29,7 +29,8 @@ public static class ServiceCollectionExtensions
     /// <code>
     /// public class MyService(IHashService hash, IHmacService hmac,
     ///                        IKeyDerivationService kdf, IDigitalSignatureService sig,
-    ///                        IEncryptionService enc, ISecureTokenService tokens) { }
+    ///                        IEncryptionService enc, IAtRestEncryptionService atRest,
+    ///                        ISecureTokenService tokens) { }
     /// </code>
     /// </remarks>
     /// <param name="services">The service collection to register into.</param>
@@ -67,6 +68,7 @@ public static class ServiceCollectionExtensions
         services.AddSingleton<IKeyDerivationService, KeyDerivationService>();
         services.AddSingleton<IDigitalSignatureService, RsaDigitalSignatureService>();
         services.AddSingleton<IEncryptionService, AesGcmEncryptionService>();
+        services.AddSingleton<IAtRestEncryptionService, AtRestEncryptionService>();
         services.AddSingleton<ISecureTokenService, SecureTokenService>();
         return services;
     }

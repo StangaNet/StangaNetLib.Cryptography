@@ -1,10 +1,10 @@
 # StangaNetLib.Cryptography
 
 [![.NET CI](https://github.com/StangaNet/StangaNetLib.Cryptography/actions/workflows/main.yml/badge.svg)](https://github.com/StangaNet/StangaNetLib.Cryptography/actions/workflows/main.yml)
-![NuGet](https://img.shields.io/badge/nuget-1.0.1-blue)
+![NuGet](https://img.shields.io/badge/nuget-1.1.0-blue)
 ![.NET](https://img.shields.io/badge/.NET-8.0%20%7C%209.0%20%7C%2010.0-512BD4)
 
-Hashing, HMAC, key derivation (PBKDF2/HKDF), AES-GCM encryption, RSA digital signatures, and secure token generation. Failures surface as `Result` / `Result<T>` from [`StangaNetLib.Core`](https://github.com/StangaNet/StangaNetLib.Core).
+Hashing, HMAC, key derivation (PBKDF2/HKDF), AES-GCM encryption, at-rest blob/stream envelopes (AES-GCM + PBKDF2/HKDF), RSA digital signatures, and secure token generation. Failures surface as `Result` / `Result<T>` from [`StangaNetLib.Core`](https://github.com/StangaNet/StangaNetLib.Core).
 
 ## Installation
 
@@ -30,8 +30,9 @@ See [CHANGELOG.md](./CHANGELOG.md) for release history.
 
 | Namespace | Components | Purpose |
 |---|---|---|
-| `StangaNetLib.Cryptography.Abstractions` | `IHashService`, `IHmacService`, `IKeyDerivationService`, `IDigitalSignatureService`, `IEncryptionService`, `ISecureTokenService` | Public contracts |
-| `StangaNetLib.Cryptography.Models` | `CryptoHashAlgorithm`, `KeyDerivationResult`, `RsaKeyPair` | Shared models |
+| `StangaNetLib.Cryptography.Abstractions` | `IHashService`, `IHmacService`, `IKeyDerivationService`, `IDigitalSignatureService`, `IEncryptionService`, `IAtRestEncryptionService`, `ISecureTokenService` | Public contracts |
+| `StangaNetLib.Cryptography.Models` | `CryptoHashAlgorithm`, `KeyDerivationResult`, `RsaKeyPair`, `AtRestKdf` | Shared models |
+| `StangaNetLib.Cryptography.Helpers` | `FileEnvelope` | Encrypted file helpers |
 | `StangaNetLib.Cryptography.Settings` | `CryptographySettings` | PBKDF2 defaults |
 | `StangaNetLib.Cryptography.Extensions` | `AddStangaNetLibCryptography` | DI |
 

@@ -1,7 +1,7 @@
 # StangaNetLib.Cryptography
 
 [![.NET CI](https://github.com/StangaNet/StangaNetLib.Cryptography/actions/workflows/main.yml/badge.svg)](https://github.com/StangaNet/StangaNetLib.Cryptography/actions/workflows/main.yml)
-![NuGet](https://img.shields.io/badge/nuget-1.0.0-blue)
+![NuGet](https://img.shields.io/badge/nuget-1.0.1-blue)
 ![.NET](https://img.shields.io/badge/.NET-8.0%20%7C%209.0%20%7C%2010.0-512BD4)
 
 Hashing, HMAC, key derivation (PBKDF2/HKDF), AES-GCM encryption, RSA digital signatures, and secure token generation. Failures surface as `Result` / `Result<T>` from [`StangaNetLib.Core`](https://github.com/StangaNet/StangaNetLib.Core).

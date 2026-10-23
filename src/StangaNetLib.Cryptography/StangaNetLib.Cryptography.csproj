@@ -3,7 +3,7 @@
     <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
     <AssemblyName>StangaNetLib.Cryptography</AssemblyName>
     <RootNamespace>StangaNetLib.Cryptography</RootNamespace>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Description>Hashing, key derivation, HMAC, AES-GCM encryption, RSA digital signatures, and secure token generation. Depends on StangaNetLib.Core.</Description>
     <PackageTags>cryptography;hashing;hmac;aes-gcm;pbkdf2;hkdf;rsa;secure-token;stanganet</PackageTags>
   </PropertyGroup>
